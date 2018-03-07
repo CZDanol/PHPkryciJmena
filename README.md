@@ -4,5 +4,5 @@ Pravidla hry viz http://www.mindok.cz/userfiles/files/pravidla/8595558302239_50.
 
 Databáze slov byla stažena z Českého národního korpusu https://korpus.cz/ . A nejsou nijak extra tříděna. Pokud někdo vytvoří lepší databázi slov, rád to přidám do repozitáře. Špatná slova lze v ovládacím panelu nahradit (náhodně se vybere slovo jiné).
 
-![Screenshot hlavní obrazovky](docs/sshot_1.png?raw=true)
-![Screenshot ovládacího panelu](docs/sshot_2.png?raw=true)
+![Screenshot hlavní obrazovky](doc/sshot_1.png?raw=true)
+![Screenshot ovládacího panelu](doc/sshot_2.png?raw=true)
