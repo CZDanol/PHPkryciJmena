@@ -1,0 +1,82 @@
+body, html, table, td {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0; }
+
+html {
+  user-select: none;
+  font-family: arial, sans-serif; }
+
+#content {
+  width: 100vw;
+  height: 100vh; }
+
+@keyframes selectedCard {
+  0% {
+    outline-color: black; }
+  100% {
+    outline-color: #76ff00; } }
+.gameTable {
+  width: 100%;
+  height: 100%;
+  border-spacing: 10px; }
+  .gameTable td {
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1vmax;
+    border: 2px solid black;
+    width: 20%;
+    height: 20%;
+    cursor: pointer; }
+    .gameTable td.red {
+      border-color: #ff6166; }
+      .gameTable td.red.discovered {
+        background-color: #ff6166;
+        color: white; }
+    .gameTable td.blue {
+      border-color: #559fff; }
+      .gameTable td.blue.discovered {
+        background-color: #559fff;
+        color: white; }
+    .gameTable td.civilian {
+      border-color: #777; }
+      .gameTable td.civilian.discovered {
+        background-color: #777;
+        color: white; }
+    .gameTable td.spy {
+      border-color: black;
+      background-color: black;
+      color: white; }
+    .gameTable td.selected {
+      outline: 5px solid;
+      animation: selectedCard 0.2s ease 0s infinite alternate; }
+
+#menu {
+  vertical-align: top;
+  max-width: 10vw;
+  padding: 10px; }
+  #menu a, #menu div {
+    display: block;
+    padding: 20px 5px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1vmax;
+    font-weight: bold;
+    text-wrap: normal;
+    background: #333; }
+    #menu a.begins, #menu div.begins {
+      color: white; }
+      #menu a.begins.red, #menu div.begins.red {
+        background-color: red; }
+      #menu a.begins.blue, #menu div.begins.blue {
+        background-color: blue; }
+    #menu a.uncover, #menu div.uncover {
+      background-color: orange; }
+    #menu aa, #menu a.action, #menu diva, #menu div.action {
+      cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */
