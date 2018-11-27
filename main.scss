@@ -38,9 +38,9 @@ html {
 		font-weight: bold;
 		font-size: 1vmax;
 
-		border: 2px solid black;
+		border: 6px solid black;
 		width: 20%;
-		height: 20%;
+		height: auto;
 
 		cursor: pointer;
 
@@ -77,6 +77,25 @@ html {
 		&.selected {
 			outline: 5px solid;
 			animation: selectedCard 0.2s ease 0s infinite alternate;
+		}
+
+		&.taken {
+			border: 0;
+			height: 30px;
+
+			div {
+				display: inline-block;
+				height: 24px;
+				width: 24px;
+				margin: 5px;
+
+				&.red {
+					background-color: red;
+				}
+				&.blue {
+					background-color: blue;
+				}
+			}
 		}
 	}
 }

@@ -41,7 +41,9 @@
 				$rowData[] = [
 						"word" => $word,
 						"type" => CARD_CIVILIAN,
-						"discovered" => false
+						"discovered" => false,
+						"row" => $row,
+						"col" => $col
 				];
 				
 				$emptyFields[] = &$rowData[$col];
@@ -58,14 +60,16 @@
 		array_splice( $emptyFields, $spyPos, 1 );
 		
 		for( $i = 0; $i < STARTING_PLAYER_CARD_COUNT; $i++ ) {
-			$pos = rand( 0, count( $emptyFields ) );
+			$pos = rand( 0, count( $emptyFields )-1 );
 			$emptyFields[$pos]["type"] = $startingPlayer;
+			//echo "START {$emptyFields[$pos]["row"]} {$emptyFields[$pos]["col"]} \n<br>";
 			array_splice( $emptyFields, $pos, 1 );
 		}
 		
 		for( $i = 0; $i < STARTING_PLAYER_CARD_COUNT - 1; $i++ ) {
-			$pos = rand( 0, count( $emptyFields ) );
+			$pos = rand( 0, count( $emptyFields )-1 );
 			$emptyFields[$pos]["type"] = $secondPlayer;
+			//echo "SECOND {$emptyFields[$pos]["row"]} {$emptyFields[$pos]["col"]} \n<br>";
 			array_splice( $emptyFields, $pos, 1 );
 		}
 		

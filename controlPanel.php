@@ -9,12 +9,18 @@
 			break;
 		
 		case "replace":
+			if(!isset($_GET["row"]) || !isset($_GET["col"]) || !is_numeric($_GET["row"]) || !is_numeric($_GET["col"]))
+				break;
+
 			$words = getWordList();
 			$data->table[$_GET["row"]][$_GET["col"]]->word = $words[rand( 0, count( $words ) )];
 			saveData( $data );
 			break;
 		
 		case "replaceDelete":
+			if(!isset($_GET["row"]) || !isset($_GET["col"]) || !is_numeric($_GET["row"]) || !is_numeric($_GET["col"]))
+				break;
+
 			$words = getWordList();
 			$words = array_diff( $words, [ $data->table[$_GET["row"]][$_GET["col"]]->word ] );
 			file_put_contents( "words.txt", implode( "\n", $words ) );
@@ -24,6 +30,9 @@
 			break;
 		
 		case "uncover":
+			if(!isset($_GET["row"]) || !isset($_GET["col"]) || !is_numeric($_GET["row"]) || !is_numeric($_GET["col"]))
+				break;
+
 			$data->table[$_GET["row"]][$_GET["col"]]->discovered = true;
 			saveData( $data );
 			break;
